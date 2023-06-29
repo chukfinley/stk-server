@@ -39,6 +39,11 @@ First move the binary  to /usr/bin/
 ```bash
 sudo mv supertuxkart /usr/bin
 ```
+Delete the source code
+```bash
+cd
+rm -rf /opt/stk-code
+```
 Create a systemd service unit file. In the terminal, run the following command
 ```bash
 sudo nano /etc/systemd/system/supertuxkart-server.service
