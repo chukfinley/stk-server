@@ -41,5 +41,22 @@ sudo mv supertuxkart /usr/bin
 ```
 Create a systemd service unit file. In the terminal, run the following command
 ```bash
-sudo nano /etc/systemd/system/supertuxkart-lan.service
+sudo nano /etc/systemd/system/supertuxkart-server.service
 ```
+Paste the following content into the file:
+```bash
+[Unit]
+Description=Supertuxkart LAN Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/supertuxkart --lan-server=test --network-console
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+```
+Now on
+
+
