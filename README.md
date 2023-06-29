@@ -57,6 +57,10 @@ User=root
 [Install]
 WantedBy=multi-user.target
 ```
-Now on
-
-
+Now only run these commnds t oactivate it 
+```bash
+sudo systemctl enable supertuxkart-server.service
+sudo systemctl start supertuxkart-server.service
+sudo systemctl status supertuxkart-server.service
+```
+Done!
