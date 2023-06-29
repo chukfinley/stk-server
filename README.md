@@ -47,6 +47,7 @@ After=network.target
 
 [Service]
 ExecStart=/opt/stk-code/cmake_build/bin/supertuxkart --lan-server=test --network-console
+WorkingDirectory=/opt/stk-code/cmake_build/bin/
 Restart=always
 User=root
 
@@ -55,6 +56,7 @@ WantedBy=multi-user.target
 ```
 Now only run these commnds t oactivate it 
 ```bash
+systemctl daemon-reload
 sudo systemctl enable supertuxkart-server.service
 sudo systemctl start supertuxkart-server.service
 sudo systemctl status supertuxkart-server.service
