@@ -29,7 +29,11 @@ sudo cmake .. -DSERVER_ONLY=ON
 sudo make -j$(nproc)
 ```
 Now run if you want to run it 
-
+```bash
 cd bin/
-
 ./supertuxkart --lan-server=test --network-console
+```
+
+Creating a service to run it 24/7
+First move the binary  to /usr/bin/
+
