@@ -1,2 +1,2 @@
 # stk-server
-Guid how to isntall stk Server
+Guid how to install stk Server
