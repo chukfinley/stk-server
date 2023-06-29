@@ -35,15 +35,6 @@ cd bin/
 ```
 
 Creating a service to run it 24/7
-First move the binary  to /usr/bin/
-```bash
-sudo mv supertuxkart /usr/bin
-```
-Delete the source code
-```bash
-cd
-rm -rf /opt/stk-code
-```
 Create a systemd service unit file. In the terminal, run the following command
 ```bash
 sudo nano /etc/systemd/system/supertuxkart-server.service
@@ -55,7 +46,7 @@ Description=Supertuxkart LAN Server
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/supertuxkart --lan-server=test --network-console
+ExecStart=/opt/stk-code/cmake_build/bin/supertuxkart --lan-server=test --network-console
 Restart=always
 User=root
 
