@@ -27,4 +27,9 @@ sudo mkdir cmake_build
 cd cmake_build/
 sudo cmake .. -DSERVER_ONLY=ON
 sudo make -j$(nproc)
-`
+```
+Now run if you want to run it 
+
+cd bin/
+
+./supertuxkart --lan-server=test --network-console
